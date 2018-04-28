@@ -20,34 +20,34 @@ class ViewController: UIViewController, ARSCNViewDelegate,SCNSceneRendererDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         // create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.dae")!
+        let scene = SCNScene(named: "art.scnassets/bird.dae")!
         
         let realGameScene = SCNScene();
         
 //
         // retrieve the ship node
-        for _ in 0...50
+        for _ in 0...35
         {
-            let shipNode = scene.rootNode.childNode(withName: "ship", recursively: true)!.clone()
+            let shipNode = scene.rootNode.childNode(withName: "bird", recursively: true)!.clone()
             
             let ship = Ship(newNode: shipNode);
             realGameScene.rootNode.addChildNode(ship.node)
             ships.append(ship);
             ship.node.position = SCNVector3(x: Float(Int(arc4random_uniform(10)) - 5), y: Float(Int(arc4random_uniform(10)) - 5), z: 10.0)
-            ship.node.scale = SCNVector3(x: Float(0.25), y: Float(0.25), z: Float(0.25))
+            ship.node.scale = SCNVector3(x: Float(10), y: Float(10), z: Float(10))
             
         }
         
-        
-        let shipNode = scene.rootNode.childNode(withName: "ship", recursively: true)!.clone()
-        shipNode.position = SCNVector3(x: Float(-100), y: Float(-100), z: Float(10))
-        realGameScene.rootNode.addChildNode(shipNode)
-        let animation = CABasicAnimation(keyPath: "rotation")
-        animation.toValue = NSValue(scnVector4: SCNVector4(x: Float(0), y: Float(1), z: Float(0), w: Float(M_PI)*2))
-        animation.duration = 30000
-        animation.repeatCount = MAXFLOAT //repeat forever
-        shipNode.addAnimation(animation, forKey: nil)
-        
+//
+//        let shipNode = scene.rootNode.childNode(withName: "bird", recursively: true)!.clone()
+//        shipNode.position = SCNVector3(x: Float(-100), y: Float(-100), z: Float(10))
+//        realGameScene.rootNode.addChildNode(shipNode)
+//        let animation = CABasicAnimation(keyPath: "rotation")
+//        animation.toValue = NSValue(scnVector4: SCNVector4(x: Float(0), y: Float(1), z: Float(0), w: Float(M_PI)*2))
+//        animation.duration = 30000
+//        animation.repeatCount = MAXFLOAT //repeat forever
+//        shipNode.addAnimation(animation, forKey: nil)
+//
         // Set the view's delegate
         sceneView.delegate = self
         
