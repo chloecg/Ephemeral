@@ -14,7 +14,7 @@ class ViewController: UIViewController, ARSCNViewDelegate,SCNSceneRendererDelega
 
     @IBOutlet var sceneView: ARSCNView!
     
-    var ships: [Ship] = [Ship]();
+    var ships: [Ship] = [Ship]()
     
 
     override func viewDidLoad() {
@@ -62,9 +62,9 @@ class ViewController: UIViewController, ARSCNViewDelegate,SCNSceneRendererDelega
         
     }
     
-    func degToRad(_ deg: CGFloat) -> CGFloat {
-        return deg / 180.0 * CGFloat(M_PI)
-    }
+//    func degToRad(_ deg: CGFloat) -> CGFloat {
+//        return deg / 180.0 * CGFloat(M_PI)
+//    }
     
     func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval)
     {

@@ -19,6 +19,8 @@
 		89B9FAB12091833C0002C9A4 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 89B9FAB02091833B0002C9A4 /* back.png */; };
 		89D885B4209127E8008BAC1F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D885B3209127E8008BAC1F /* CoreLocation.framework */; };
 		89D885BE2091702E008BAC1F /* IntropageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D885BD2091702E008BAC1F /* IntropageViewController.swift */; };
+		89F49F4A2094059600192D9F /* Ship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F49F492094059500192D9F /* Ship.swift */; };
+		89F49F4C2094080C00192D9F /* SCNVector3Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F49F4B2094080B00192D9F /* SCNVector3Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		89B9FAB02091833B0002C9A4 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		89D885B3209127E8008BAC1F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		89D885BD2091702E008BAC1F /* IntropageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntropageViewController.swift; sourceTree = "<group>"; };
+		89F49F492094059500192D9F /* Ship.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ship.swift; sourceTree = "<group>"; };
+		89F49F4B2094080B00192D9F /* SCNVector3Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCNVector3Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,8 @@
 		899F4BC32090F50700AD05FE /* Ephemeral_v2 */ = {
 			isa = PBXGroup;
 			children = (
+				89F49F4B2094080B00192D9F /* SCNVector3Extensions.swift */,
+				89F49F492094059500192D9F /* Ship.swift */,
 				89B9FAB02091833B0002C9A4 /* back.png */,
 				89B9FAAE209183160002C9A4 /* AnimationLoopViewController.swift */,
 				89B9FAAC2091830E0002C9A4 /* PlayerView.swift */,
@@ -172,7 +178,9 @@
 				89D885BE2091702E008BAC1F /* IntropageViewController.swift in Sources */,
 				89B9FAAD2091830E0002C9A4 /* PlayerView.swift in Sources */,
 				899F4BC92090F50700AD05FE /* ViewController.swift in Sources */,
+				89F49F4A2094059600192D9F /* Ship.swift in Sources */,
 				89B9FAAF209183160002C9A4 /* AnimationLoopViewController.swift in Sources */,
+				89F49F4C2094080C00192D9F /* SCNVector3Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
