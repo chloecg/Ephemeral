@@ -15,7 +15,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     
-    let humanPosition = SCNVector3(2, -1, -5)
+    let humanPosition = SCNVector3(1, -1, -2)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,20 +33,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Load Model
         loadModel()
+        //loadLeaf()
         loadParticle()
     }
-    func loadParticle(){
-        //let scene = SCNScene(named: "rainParticles.sks")
-        
-        let particlesNode = SCNNode()
-        let particleSystem = SCNParticleSystem(named: "rainParticle", inDirectory: "")
-        particlesNode.addParticleSystem(particleSystem!)
-        particlesNode.position = humanPosition
-        particlesNode.scale = SCNVector3(0.2, 0.2, 0.2)
-        sceneView.scene.rootNode.addChildNode(particlesNode)
-        
-        
-    }
+
     func loadModel () {
         
         // Load the character in the idle animation
@@ -60,6 +50,40 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Set up some properties
         node.position = humanPosition
         node.scale = SCNVector3(0.8, 0.8, 0.8)
+        
+    }
+    
+    private func loadLeaf() {
+        if let scene = LeafSimulationScene(fileNamed:"LeafSimulationScene") {
+            // Configure the view.
+            //let skView = self.view as! SKView
+            //skView.showsFPS = true
+            //skView.showsNodeCount = true
+            
+            /* Sprite Kit applies additional optimizations to improve rendering performance */
+            //skView.ignoresSiblingOrder = true
+            
+            /* Set the scale mode to scale to fit the window */
+            //scene.scaleMode = .aspectFill
+            
+            // Make the scene the same size as the scene's SKView
+            //scene.size = CGSize(width: 1.0, height: 1.0)//skView.bounds.size
+            //sceneView.scene.rootNode.addChildNode(scene)
+            //skView.presentScene(scene)
+        }
+    }
+    
+    func loadParticle(){
+        //let scene = SCNScene(named: "rainParticles.sks")
+        
+        let particlesNode = SCNNode()
+        let particleSystem = SCNParticleSystem(named: "bokehParticle", inDirectory: "")
+        particlesNode.addParticleSystem(particleSystem!)
+        particlesNode.position = SCNVector3(1, -0.5, -2.5)//humanPosition
+        particlesNode.scale = SCNVector3(0.2, 0.2, 0.2)
+        //particlesNode.rotation = SCNVector4(0, 0, 1, CGFloat.pi)
+        sceneView.scene.rootNode.addChildNode(particlesNode)
+        
         
     }
     

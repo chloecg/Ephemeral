@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		8963246120952BAA00743FEF /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8963245F20952BAA00743FEF /* spark.png */; };
 		8963246220952BAA00743FEF /* rainParticle.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 8963246020952BAA00743FEF /* rainParticle.scnp */; };
+		896324642095625100743FEF /* LeafSimulationScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896324632095625100743FEF /* LeafSimulationScene.swift */; };
+		89632466209565E100743FEF /* LeafSimulationScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 89632465209565E100743FEF /* LeafSimulationScene.sks */; };
+		8963246920956AEA00743FEF /* bokeh.png in Resources */ = {isa = PBXBuildFile; fileRef = 8963246720956AEA00743FEF /* bokeh.png */; };
+		8963246A20956AEA00743FEF /* bokehParticle.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 8963246820956AEA00743FEF /* bokehParticle.scnp */; };
 		89A63C3120941E9C00533ECB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A63C3020941E9C00533ECB /* AppDelegate.swift */; };
 		89A63C3320941E9C00533ECB /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 89A63C3220941E9C00533ECB /* art.scnassets */; };
 		89A63C3520941E9C00533ECB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A63C3420941E9C00533ECB /* ViewController.swift */; };
@@ -20,6 +24,10 @@
 /* Begin PBXFileReference section */
 		8963245F20952BAA00743FEF /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		8963246020952BAA00743FEF /* rainParticle.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = rainParticle.scnp; sourceTree = "<group>"; };
+		896324632095625100743FEF /* LeafSimulationScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeafSimulationScene.swift; sourceTree = "<group>"; };
+		89632465209565E100743FEF /* LeafSimulationScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LeafSimulationScene.sks; sourceTree = "<group>"; };
+		8963246720956AEA00743FEF /* bokeh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bokeh.png; sourceTree = "<group>"; };
+		8963246820956AEA00743FEF /* bokehParticle.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = bokehParticle.scnp; sourceTree = "<group>"; };
 		89A63C2D20941E9C00533ECB /* sitPose.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sitPose.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A63C3020941E9C00533ECB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89A63C3220941E9C00533ECB /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -60,8 +68,12 @@
 		89A63C2F20941E9C00533ECB /* sitPose */ = {
 			isa = PBXGroup;
 			children = (
+				89632465209565E100743FEF /* LeafSimulationScene.sks */,
+				896324632095625100743FEF /* LeafSimulationScene.swift */,
 				89A63C3020941E9C00533ECB /* AppDelegate.swift */,
 				89A63C3420941E9C00533ECB /* ViewController.swift */,
+				8963246720956AEA00743FEF /* bokeh.png */,
+				8963246820956AEA00743FEF /* bokehParticle.scnp */,
 				89A63C3220941E9C00533ECB /* art.scnassets */,
 				89A63C3920941E9D00533ECB /* Assets.xcassets */,
 				89A63C3620941E9C00533ECB /* Main.storyboard */,
@@ -136,7 +148,10 @@
 				89A63C3D20941E9D00533ECB /* LaunchScreen.storyboard in Resources */,
 				89A63C3A20941E9D00533ECB /* Assets.xcassets in Resources */,
 				8963246220952BAA00743FEF /* rainParticle.scnp in Resources */,
+				8963246920956AEA00743FEF /* bokeh.png in Resources */,
 				89A63C3820941E9C00533ECB /* Main.storyboard in Resources */,
+				8963246A20956AEA00743FEF /* bokehParticle.scnp in Resources */,
+				89632466209565E100743FEF /* LeafSimulationScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				896324642095625100743FEF /* LeafSimulationScene.swift in Sources */,
 				89A63C3520941E9C00533ECB /* ViewController.swift in Sources */,
 				89A63C3120941E9C00533ECB /* AppDelegate.swift in Sources */,
 			);
