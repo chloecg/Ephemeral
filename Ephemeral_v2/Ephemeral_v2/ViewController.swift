@@ -118,7 +118,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDele
                 x: humanPosition.x+Float(Int(arc4random_uniform(10)) - 5)/100,
                 y: humanPosition.y+Float(Int(arc4random_uniform(10)) - 5)/100,
                 z: humanPosition.z+Float(Int(arc4random_uniform(10)) - 5)/100 - 5)
-            ship.node.scale = SCNVector3(x: Float(10), y: Float(10), z: Float(10))
+            ship.node.scale = SCNVector3(x: Float(7), y: Float(7), z: Float(7))
             
         }
 
