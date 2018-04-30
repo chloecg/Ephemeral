@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:lookingFor_video.xcodeproj">
+      location = "group:/Users/chloe/Code/Ephemeral/lookingFor_video/lookingFor_video/Thumbnail.jpg">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

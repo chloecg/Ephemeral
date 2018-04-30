@@ -15,7 +15,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     
-    let humanPosition = SCNVector3(1, -1, -2)
+    let humanPosition = SCNVector3(2, -1, -10)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +49,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Set up some properties
         node.position = humanPosition
-        node.scale = SCNVector3(0.8, 0.8, 0.8)
+        node.scale = SCNVector3(2, 2, 2)
         
     }
     
@@ -79,8 +79,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let particlesNode = SCNNode()
         let particleSystem = SCNParticleSystem(named: "bokehParticle", inDirectory: "")
         particlesNode.addParticleSystem(particleSystem!)
-        particlesNode.position = SCNVector3(1, -0.5, -2.5)//humanPosition
-        particlesNode.scale = SCNVector3(0.2, 0.2, 0.2)
+        particlesNode.position = SCNVector3(humanPosition.x, humanPosition.y + 2.5, humanPosition.z - 0.5)
+        particlesNode.scale = SCNVector3(0.25, 0.25, 0.25)
         //particlesNode.rotation = SCNVector4(0, 0, 1, CGFloat.pi)
         sceneView.scene.rootNode.addChildNode(particlesNode)
         

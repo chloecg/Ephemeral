@@ -27,7 +27,7 @@ class nearbyAR: UIViewController, UIGestureRecognizerDelegate {
     func setupVideoPlayer() {
         
         // Guard allows us to make sure we have a valid video resource before we go any further
-        guard let videoUrl = Bundle.main.url(forResource: "QDshow", withExtension: "mov") else {
+        guard let videoUrl = Bundle.main.url(forResource: "2", withExtension: "mp4") else {
             print("Error: Could not find video!")
             return // If we can't find the video, we do nothing
         }

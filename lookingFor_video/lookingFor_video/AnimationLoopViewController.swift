@@ -42,9 +42,9 @@ class AnimationLoopViewController: UIViewController, UIGestureRecognizerDelegate
         scaleView = UIView(frame: CGRect(x: 0, y: 0, width: viewRadius * 2, height: viewRadius * 2))
         scaleView.layer.cornerRadius = viewRadius
         
+        let uiImage = UIImage(named: "Thumbnail.JPG")!
+        scaleView.backgroundColor = UIColor(patternImage: uiImage)
         
-        // Set background color.
-        scaleView.backgroundColor = greyColor
         
         // Center on parent view.
         scaleView.center = CGPoint(x: xOffset, y: yOffset)
@@ -62,7 +62,8 @@ class AnimationLoopViewController: UIViewController, UIGestureRecognizerDelegate
         scaleView2 = UIView(frame: CGRect(x: 0, y: 0, width: viewRadius * 2, height: viewRadius * 2))
         scaleView2.layer.cornerRadius = viewRadius
         scaleView2.center = CGPoint(x: xOffset, y: yOffset)
-        scaleView2.backgroundColor = greyColor
+        let uiImage2 = UIImage(named: "daytime.JPG")!
+        scaleView2.backgroundColor = UIColor(patternImage: uiImage2)
         self.view.addSubview(scaleView2)
         
         yOffset += viewRadius * 3.5;
@@ -74,7 +75,8 @@ class AnimationLoopViewController: UIViewController, UIGestureRecognizerDelegate
         scaleView3 = UIView(frame: CGRect(x: 0, y: 0, width: viewRadius * 2, height: viewRadius * 2))
         scaleView3.layer.cornerRadius = viewRadius
         scaleView3.center = CGPoint(x: xOffset, y: yOffset)
-        scaleView3.backgroundColor = greyColor
+        let uiImage3 = UIImage(named: "bird.JPG")!
+        scaleView3.backgroundColor = UIColor(patternImage: uiImage3)
         self.view.addSubview(scaleView3)
         
         yOffset += viewRadius * 3.5;
