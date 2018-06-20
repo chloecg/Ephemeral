@@ -23,8 +23,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Set the view's delegate
         sceneView.delegate = self
         
-        // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
         
         // Create a new scene
         let scene = SCNScene()
@@ -46,32 +44,18 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let node = waveScene.rootNode.childNode(withName: "sitsad", recursively: true)!
         
         sceneView.scene.rootNode.addChildNode(node)
-        
+        if let bloomFilter = CIFilter(name: "CIBloom") {
+            bloomFilter.setValue(20.0, forKey: kCIInputRadiusKey)
+            bloomFilter.setValue(1.0, forKey: kCIInputIntensityKey)
+            node.filters = [ bloomFilter ]
+        }
         // Set up some properties
         node.position = humanPosition
         node.scale = SCNVector3(2, 2, 2)
         
     }
     
-    private func loadLeaf() {
-        if let scene = LeafSimulationScene(fileNamed:"LeafSimulationScene") {
-            // Configure the view.
-            //let skView = self.view as! SKView
-            //skView.showsFPS = true
-            //skView.showsNodeCount = true
-            
-            /* Sprite Kit applies additional optimizations to improve rendering performance */
-            //skView.ignoresSiblingOrder = true
-            
-            /* Set the scale mode to scale to fit the window */
-            //scene.scaleMode = .aspectFill
-            
-            // Make the scene the same size as the scene's SKView
-            //scene.size = CGSize(width: 1.0, height: 1.0)//skView.bounds.size
-            //sceneView.scene.rootNode.addChildNode(scene)
-            //skView.presentScene(scene)
-        }
-    }
+
     
     func loadParticle(){
         //let scene = SCNScene(named: "rainParticles.sks")
@@ -134,4 +118,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
         
     }
+
 }
+
+

@@ -36,7 +36,7 @@ class IntropageViewController: UIViewController, CLLocationManagerDelegate{
             {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 
-                let ViewController = storyboard.instantiateViewController(withIdentifier: "ViewController")
+                let ViewController = storyboard.instantiateViewController(withIdentifier: "AnimationLoopViewController")
                 //ViewController
                 self.present(ViewController, animated: true, completion: nil)
                 print("under 1 mile")

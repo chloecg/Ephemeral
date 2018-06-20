@@ -19,6 +19,8 @@ class ViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDele
     
     var ships: [Ship] = [Ship]()
     let humanPosition = SCNVector3(2, -1, -10)
+        //SCNVector3(2, -1, -3)
+    
     
     
     //var t2:Bool = true
@@ -42,7 +44,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDele
         sceneView.delegate = self
         
         // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
+        //sceneView.showsStatistics = true
         
         // Create a new scene
         let scene = SCNScene()
@@ -109,22 +111,23 @@ class ViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDele
         // create a new scene
         let scene = SCNScene(named: "art.scnassets/bird.dae")!
         
-        //        let realGameScene = SCNScene();
+ 
         
-        //
         // retrieve the ship node
-        let bloomFilter = CIFilter(name: "CIBloom")
-        if (bloomFilter != nil) {
-            bloomFilter!.setValue(20.0, forKey: kCIInputRadiusKey)
-            bloomFilter!.setValue(1.0, forKey: kCIInputIntensityKey)
-        }
         
-        for _ in 0...7
+//        let bloomFilter = CIFilter(name: "CIBloom")
+//        if (bloomFilter != nil) {
+//            bloomFilter!.setValue(20.0, forKey: kCIInputRadiusKey)
+//            bloomFilter!.setValue(1.0, forKey: kCIInputIntensityKey)
+//        }
+        
+        for _ in 0...35
         {
             let shipNode = scene.rootNode.childNode(withName: "bird", recursively: true)!.clone()
-            if  (bloomFilter != nil) {
-                shipNode.filters = [ bloomFilter! ]
-            }
+            
+//            if  (bloomFilter != nil) {
+//                shipNode.filters = [ bloomFilter! ]
+//            }
             
             let ship = Ship(newNode: shipNode);
             sceneView.scene.rootNode.addChildNode(ship.node)
